@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".Fragments.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/baseline_arrow_back_24"
+            app:navigationIconTint="@color/white"
+            app:title="Profile"
+            app:titleTextColor="@color/white">
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/Profile_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/blue"
+            app:civ_border_color="@color/yellow"
+            app:civ_shadow_color="#3f51b5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialToolbar3" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/Profile_img"
+            app:layout_constraintStart_toEndOf="@+id/Profile_img"
+            app:layout_constraintTop_toTopOf="@+id/Profile_img"
+            app:layout_constraintVertical_bias="0.26" />
+
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp2"
+            android:layout_width="match_parent"
+            android:layout_height="560dp"
+            android:layout_marginBottom="8dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Profile_img"
+            app:tabTextColor="@color/white">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <Button
+            android:id="@+id/edit_btn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/follow_bg"
+            android:text="Follow"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

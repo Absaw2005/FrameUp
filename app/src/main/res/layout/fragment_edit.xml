@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SignUpActivity">
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/edit_txt"
+        android:text="Phone number, email or username"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/edit_txt"
+        android:text="Password"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/userName"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/edit_txt"
+        android:text="Name"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_img"
+        app:layout_constraintStart_toStartOf="@+id/profile_img"
+        app:layout_constraintTop_toBottomOf="@+id/profile_img" />
+
+    <Button
+        android:id="@+id/saveData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="#3897f0"
+        android:padding="12dp"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/profile_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/user"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#3f51b5"
+        app:civ_shadow_radius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

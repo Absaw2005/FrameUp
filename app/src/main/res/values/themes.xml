@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Instagramclone" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/black</item>
+    </style>
+
+    <style name="Theme.Instagramclone" parent="Base.Theme.Instagramclone" />
+</resources>
